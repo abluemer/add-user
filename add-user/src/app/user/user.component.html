@@ -1,0 +1,9 @@
+<div>
+    <button (click)="onAddUser()">Klick mich!</button>
+    <ul>
+        <li *ngFor="let user of users">
+            {{user.firstname}}
+            {{user.lastname}}
+        </li>
+    </ul>
+</div>
