@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { User } from '../models/user-interface'
+import { THIS_EXPR } from '@angular/compiler/src/output/output_ast';
 
 @Component({
   selector: 'app-user',
@@ -18,6 +19,11 @@ export class UserComponent {
       new User('Neuer', 'User')
     );
   }
+
+onDeleteUser(index: number) {
+  this.users.splice(index, 1); // 1 steht dafür das er nur einen löscht
+}
+
   constructor() { }
 
   ngOnInit() {

@@ -1,9 +1,11 @@
 <div>
     <button (click)="onAddUser()">Klick mich!</button>
     <ul>
-        <li *ngFor="let user of users">
+        <li *ngFor="let user of users; let i = index">
+            {{i}}:
             {{user.firstname}}
             {{user.lastname}}
+            <button (click)="onDeleteUser(i)">Lösch mich!</button>
         </li>
     </ul>
 </div>
